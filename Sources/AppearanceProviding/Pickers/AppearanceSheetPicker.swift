@@ -11,6 +11,8 @@ public struct AppearanceSheetPicker: View {
     private var appearanceProvider
     @State private var isSheetPresented = false
 
+    public init() { }
+
     public var body: some View {
         HStack(spacing: 4) {
             Text(appearanceProvider.colorScheme.title)

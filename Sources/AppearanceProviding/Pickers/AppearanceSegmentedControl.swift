@@ -13,6 +13,8 @@ public struct AppearanceSegmentedControl: View {
         [.light, .dark, .none]
     }
 
+    public init() { }
+
     public var body: some View {
         @Bindable var appearanceProvider = appearanceProvider
         Picker("Appearance", selection: $appearanceProvider.colorScheme) {
