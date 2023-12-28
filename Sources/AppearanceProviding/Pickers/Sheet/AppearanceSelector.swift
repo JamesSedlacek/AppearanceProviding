@@ -34,7 +34,7 @@ struct AppearanceSelector: View {
 #Preview {
     NavigationStack {
             AppearanceSelector()
-                .setPickerStyle(.menuPicker)
+                .pickerStyle(.menuPicker)
                 .setAppearance()
     }
 }
