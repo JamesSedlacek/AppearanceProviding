@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension AppearancePicker {
-    func pickerStyle(_ style: AppearanceStyle) -> AppearancePicker {
+public extension AppearancePicker {
+    public func pickerStyle(_ style: AppearanceStyle) -> AppearancePicker {
         var newSelector = self
         newSelector.appearanceSelectorStyle = style
         return newSelector
