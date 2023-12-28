@@ -10,7 +10,7 @@ import Foundation
 public extension AppearancePicker {
     public func pickerStyle(_ style: AppearanceStyle) -> AppearancePicker {
         var newSelector = self
-        newSelector.appearanceSelectorStyle = style
+        newSelector.style = style
         return newSelector
     }
 }
