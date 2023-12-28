@@ -6,7 +6,7 @@
 
 import SwiftUI
 
-public struct AppearanceSegmentedControl: View {
+public struct StyleSegmentedControl: View {
     @Environment(AppearanceProvider.self)
     private var appearanceProvider
     private var colorSchemeCases: [ColorScheme?] {
@@ -28,7 +28,7 @@ public struct AppearanceSegmentedControl: View {
 
 #Preview {
     VStack {
-        AppearanceSegmentedControl()
+        StyleSegmentedControl()
             .padding()
     }
     .setAppearance(default: .dark)

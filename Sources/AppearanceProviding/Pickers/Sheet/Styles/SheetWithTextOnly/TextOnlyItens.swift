@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct AppearanceOptionMinimalistView: View {
+struct TextOnlyItens: View {
     @Environment(AppearanceProvider.self)
     private var appearanceProvider
     private let colorScheme: ColorScheme?
@@ -40,9 +40,9 @@ struct AppearanceOptionMinimalistView: View {
 
 #Preview {
     HStack {
-        AppearanceOptionView(colorScheme: .light)
-        AppearanceOptionView(colorScheme: .dark)
-        AppearanceOptionView(colorScheme: .none)
+        TextOnlyItens(colorScheme: .light)
+        TextOnlyItens(colorScheme: .dark)
+        TextOnlyItens(colorScheme: .none)
     }
     .setAppearance()
 }

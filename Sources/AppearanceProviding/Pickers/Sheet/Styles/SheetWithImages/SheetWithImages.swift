@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Default: View {
+struct StyleSheetWithImagesView: View {
     @Environment(AppearanceProvider.self)
     private var appearanceProvider
     @Environment(\.dismiss)
@@ -20,7 +20,7 @@ struct Default: View {
         HStack {
             Spacer()
             ForEach(colorSchemeCases, id: \.title) { colorScheme in
-                AppearanceOptionView(colorScheme: colorScheme)
+                WithImageItens(colorScheme: colorScheme)
                     .frame(maxWidth: .infinity)
             }
             Spacer()
@@ -39,5 +39,5 @@ struct Default: View {
 }
 
 #Preview {
-    Default()
+    StyleSheetWithImagesView()
 }

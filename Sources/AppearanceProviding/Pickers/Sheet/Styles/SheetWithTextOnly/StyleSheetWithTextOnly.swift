@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Minimalist: View {
+struct StyleSheetWithTextOnly: View {
     @Environment(AppearanceProvider.self)
     private var appearanceProvider
     @Environment(\.dismiss)
@@ -20,7 +20,7 @@ struct Minimalist: View {
         VStack {
             Spacer()
             ForEach(colorSchemeCases, id: \.title) { colorScheme in
-                AppearanceOptionMinimalistView(colorScheme: colorScheme)
+                TextOnlyItens(colorScheme: colorScheme)
                     .frame(maxWidth: .infinity)
             }
             Spacer()
@@ -40,5 +40,5 @@ struct Minimalist: View {
 
 
 #Preview {
-    Default()
+    StyleSheetWithTextOnly()
 }

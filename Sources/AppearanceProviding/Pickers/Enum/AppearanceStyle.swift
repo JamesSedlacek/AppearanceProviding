@@ -8,6 +8,8 @@
 import Foundation
 
 enum AppearanceStyle {
-    case defaultStyle
-    case minimalistStyle
+    case sheetWithImages
+    case sheetWithTextOnly
+    case segmentedControl
+    case menuPicker
 }

@@ -6,7 +6,7 @@
 
 import SwiftUI
 
-struct AppearanceOptionView: View {
+struct WithImageItens: View {
     @Environment(AppearanceProvider.self)
     private var appearanceProvider
     private let colorScheme: ColorScheme?
@@ -43,9 +43,9 @@ struct AppearanceOptionView: View {
 
 #Preview {
     HStack {
-        AppearanceOptionView(colorScheme: .light)
-        AppearanceOptionView(colorScheme: .dark)
-        AppearanceOptionView(colorScheme: .none)
+        WithImageItens(colorScheme: .light)
+        WithImageItens(colorScheme: .dark)
+        WithImageItens(colorScheme: .none)
     }
     .setAppearance()
 }

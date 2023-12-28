@@ -6,7 +6,7 @@
 
 import SwiftUI
 
-public struct AppearanceMenuPicker: View {
+public struct StyleMenuPicker: View {
     @Environment(AppearanceProvider.self)
     private var appearanceProvider
     private var colorSchemeCases: [ColorScheme?] {
@@ -28,7 +28,7 @@ public struct AppearanceMenuPicker: View {
 
 #Preview {
     VStack {
-        AppearanceMenuPicker()
+        StyleMenuPicker()
             .padding()
     }
     .setAppearance(default: .dark)
