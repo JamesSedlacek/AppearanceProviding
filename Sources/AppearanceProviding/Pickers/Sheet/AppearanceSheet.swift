@@ -15,14 +15,14 @@ struct AppearanceSheet: View {
         [.light, .dark, .none]
     }
     
-    var style: AppearanceStyle = .style1
+    var style: AppearanceStyle = .defaultStyle
 
     var body: some View {
         NavigationStack {
             switch style {
-            case .style1:
+            case .defaultStyle:
                 Default()
-            case .style2:
+            case .minimalistStyle:
                 Minimalist()
             }
         }
@@ -30,6 +30,6 @@ struct AppearanceSheet: View {
 }
 
 #Preview {
-    AppearanceSheet(style: .style2)
+    AppearanceSheet(style: .minimalistStyle)
         .setAppearance()
 }

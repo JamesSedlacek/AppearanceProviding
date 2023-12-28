@@ -8,6 +8,6 @@
 import Foundation
 
 enum AppearanceStyle {
-    case style1
-    case style2
+    case defaultStyle
+    case minimalistStyle
 }
