@@ -15,7 +15,7 @@ public struct AppearancePicker: View {
         case menu
     }
     
-    var style: AppearanceStyle
+    private let style: AppearanceStyle  // Now private
     
     public init(style: AppearanceStyle = .sheetWithImages) {
         self.style = style
@@ -37,8 +37,8 @@ public struct AppearancePicker: View {
 
 #Preview {
     NavigationStack {
-            AppearancePicker()
-                .pickerStyle(.menu)
-                .setAppearance()
+        AppearancePicker()
+            .pickerStyle(.menu)
+            .setAppearance()
     }
 }
