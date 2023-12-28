@@ -6,7 +6,7 @@
 
 import SwiftUI
 
-struct AppearanceSelector: View {
+struct AppearancePicker: View {
     @Environment(AppearanceProvider.self)
     private var appearanceProvider
     @Environment(\.dismiss)
@@ -33,7 +33,7 @@ struct AppearanceSelector: View {
 
 #Preview {
     NavigationStack {
-            AppearanceSelector()
+            AppearancePicker()
                 .pickerStyle(.menuPicker)
                 .setAppearance()
     }
