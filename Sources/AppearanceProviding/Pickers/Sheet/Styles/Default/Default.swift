@@ -38,7 +38,6 @@ struct Default: View {
     }
 }
 
-
 #Preview {
     Default()
 }
