@@ -14,7 +14,6 @@ struct AppearanceSheet: View {
     private var colorSchemeCases: [ColorScheme?] {
         [.light, .dark, .none]
     }
-    
     var style: AppearanceStyle = .defaultStyle
 
     var body: some View {
@@ -30,6 +29,6 @@ struct AppearanceSheet: View {
 }
 
 #Preview {
-    AppearanceSheet(style: .minimalistStyle)
+    AppearanceSheet()
         .setAppearance()
 }
