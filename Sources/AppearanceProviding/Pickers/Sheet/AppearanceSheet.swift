@@ -14,32 +14,22 @@ struct AppearanceSheet: View {
     private var colorSchemeCases: [ColorScheme?] {
         [.light, .dark, .none]
     }
+    
+    var style: AppearanceStyle = .style1
 
     var body: some View {
         NavigationStack {
-            HStack {
-                Spacer()
-                ForEach(colorSchemeCases, id: \.title) { colorScheme in
-                    AppearanceOptionView(colorScheme: colorScheme)
-                        .frame(maxWidth: .infinity)
-                }
-                Spacer()
-            }
-            .padding()
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Appearance Selection")
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Done") { dismiss() }
-                }
+            switch style {
+            case .style1:
+                Default()
+            case .style2:
+                Minimalist()
             }
         }
-        .presentationDetents([.height(360)])
-        .preferredColorScheme(appearanceProvider.colorScheme)
     }
 }
 
 #Preview {
-    AppearanceSheet()
+    AppearanceSheet(style: .style2)
         .setAppearance()
 }
