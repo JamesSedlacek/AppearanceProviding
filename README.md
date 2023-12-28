@@ -65,7 +65,7 @@ struct SettingsView {
         VStack {
             AppearanceMenuPicker()
             AppearanceSegmentedControl()
-            AppearanceSheetPicker()
+            AppearanceSheetPicker(style: .default)
         }
     }
 }
