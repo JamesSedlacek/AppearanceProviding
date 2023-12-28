@@ -15,7 +15,7 @@ struct AppearanceSelector: View {
         [.light, .dark, .none]
     }
     
-    var appearanceSelectorStyle: AppearanceStyle = .menuPicker
+    var appearanceSelectorStyle: AppearanceStyle = .sheetWithImages
 
     var body: some View {
         switch appearanceSelectorStyle {
