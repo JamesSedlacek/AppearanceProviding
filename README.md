@@ -70,7 +70,7 @@ struct SettingsView {
             AppearancePicker()
                 .pickerStyle(.segmented)
             AppearancePicker()
-                .pickerStyle(.menuPicker)
+                .pickerStyle(.menu)
         }
     }
 }
