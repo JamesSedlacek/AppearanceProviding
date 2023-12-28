@@ -15,7 +15,7 @@ public struct AppearancePicker: View {
         case menu
     }
     
-    private let style: AppearanceStyle  // Now private
+    private let style: AppearanceStyle
     
     public init(style: AppearanceStyle = .sheetWithImages) {
         self.style = style
