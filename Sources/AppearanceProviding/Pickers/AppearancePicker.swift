@@ -6,14 +6,14 @@
 
 import SwiftUI
 
-enum AppearanceStyle {
-    case sheetWithImages
-    case sheetWithTextOnly
-    case segmented
-    case menu
-}
-
 struct AppearancePicker: View {
+    
+    enum AppearanceStyle {
+        case sheetWithImages
+        case sheetWithTextOnly
+        case segmented
+        case menu
+    }
     
     var appearanceSelectorStyle: AppearanceStyle = .sheetWithImages
 
