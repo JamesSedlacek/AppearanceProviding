@@ -6,18 +6,22 @@
 
 import SwiftUI
 
-struct AppearancePicker: View {
+public struct AppearancePicker: View {
     
-    enum AppearanceStyle {
+    public enum AppearanceStyle {
         case sheetWithImages
         case sheetWithTextOnly
         case segmented
         case menu
     }
     
-    var appearanceSelectorStyle: AppearanceStyle = .sheetWithImages
+    var appearanceSelectorStyle: AppearanceStyle
+    
+    public init(style: AppearanceStyle = .sheetWithImages) {
+        self.appearanceSelectorStyle = style
+    }
 
-    var body: some View {
+    public var body: some View {
         switch appearanceSelectorStyle {
         case .sheetWithImages:
             StyleSheetWithImagesView()
