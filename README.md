@@ -68,7 +68,7 @@ struct SettingsView {
             AppearancePicker()
                 .pickerStyle(.sheetWithTextOnly)
             AppearancePicker()
-                .pickerStyle(.segmentedControl)
+                .pickerStyle(.segmented)
             AppearancePicker()
                 .pickerStyle(.menuPicker)
         }
