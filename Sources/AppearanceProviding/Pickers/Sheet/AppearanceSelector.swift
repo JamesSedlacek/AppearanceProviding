@@ -14,10 +14,11 @@ struct AppearanceSelector: View {
     private var colorSchemeCases: [ColorScheme?] {
         [.light, .dark, .none]
     }
-    var style: AppearanceStyle = .menuPicker
+    
+    var appearanceSelectorStyle: AppearanceStyle = .menuPicker
 
     var body: some View {
-        switch style {
+        switch appearanceSelectorStyle {
         case .sheetWithImages:
             StyleSheetWithImagesView()
         case .sheetWithTextOnly:
@@ -32,7 +33,8 @@ struct AppearanceSelector: View {
 
 #Preview {
     NavigationStack {
-            AppearanceSelector(style: .sheetWithImages)
+            AppearanceSelector()
+                .setPickerStyle(.menuPicker)
                 .setAppearance()
     }
 }
