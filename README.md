@@ -64,13 +64,13 @@ struct SettingsView {
     var body: some View {
         VStack {
             AppearanceSelector()
-                .setPickerStyle(.sheetWithImages)
+                .pickerStyle(.sheetWithImages)
             AppearanceSelector()
-                .setPickerStyle(.sheetWithTextOnly)
+                .pickerStyle(.sheetWithTextOnly)
             AppearanceSelector()
-                .setPickerStyle(.segmentedControl)
+                .pickerStyle(.segmentedControl)
             AppearanceSelector()
-                .setPickerStyle(.menuPicker)
+                .pickerStyle(.menuPicker)
         }
     }
 }
