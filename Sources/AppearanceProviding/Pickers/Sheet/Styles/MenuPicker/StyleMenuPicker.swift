@@ -6,7 +6,7 @@
 
 import SwiftUI
 
-public struct StyleMenuPicker: View {
+struct StyleMenuPicker: View {
     @Environment(AppearanceProvider.self)
     private var appearanceProvider
     private var colorSchemeCases: [ColorScheme?] {

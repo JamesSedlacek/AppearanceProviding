@@ -1,14 +1,13 @@
 //
-//  SwiftUIView.swift
+//  AppearenceTextOptionView.swift
 //  
 //
 //  Created by Marcelo Diefenbach on 28/12/23.
 //
 
-
 import SwiftUI
 
-struct TextOnlyItens: View {
+struct AppearenceTextOptionView: View {
     @Environment(AppearanceProvider.self)
     private var appearanceProvider
     private let colorScheme: ColorScheme?
@@ -40,9 +39,9 @@ struct TextOnlyItens: View {
 
 #Preview {
     HStack {
-        TextOnlyItens(colorScheme: .light)
-        TextOnlyItens(colorScheme: .dark)
-        TextOnlyItens(colorScheme: .none)
+        AppearenceTextOptionView(colorScheme: .light)
+        AppearenceTextOptionView(colorScheme: .dark)
+        AppearenceTextOptionView(colorScheme: .none)
     }
     .setAppearance()
 }

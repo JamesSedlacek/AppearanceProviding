@@ -1,5 +1,5 @@
 //
-//  AppearanceSheet.swift
+//  AppearancePicker.swift
 //
 //  Created by James Sedlacek on 12/26/23.
 //
@@ -7,12 +7,12 @@
 import SwiftUI
 
 struct AppearancePicker: View {
-    @Environment(AppearanceProvider.self)
-    private var appearanceProvider
-    @Environment(\.dismiss)
-    private var dismiss
-    private var colorSchemeCases: [ColorScheme?] {
-        [.light, .dark, .none]
+    
+    enum AppearanceStyle {
+        case sheetWithImages
+        case sheetWithTextOnly
+        case segmented
+        case menu
     }
     
     var appearanceSelectorStyle: AppearanceStyle = .sheetWithImages
@@ -23,9 +23,9 @@ struct AppearancePicker: View {
             StyleSheetWithImagesView()
         case .sheetWithTextOnly:
             StyleSheetWithTextOnly()
-        case .segmentedControl:
+        case .segmented:
             StyleSegmentedControl()
-        case .menuPicker:
+        case .menu:
             StyleMenuPicker()
         }
     }
@@ -34,7 +34,7 @@ struct AppearancePicker: View {
 #Preview {
     NavigationStack {
             AppearancePicker()
-                .pickerStyle(.menuPicker)
+                .pickerStyle(.menu)
                 .setAppearance()
     }
 }

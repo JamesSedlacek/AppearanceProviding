@@ -1,5 +1,5 @@
 //
-//  SwiftUIView.swift
+//  StyleSheetWithTextOnly.swift
 //
 //
 //  Created by Marcelo Diefenbach on 28/12/23.
@@ -20,7 +20,7 @@ struct StyleSheetWithTextOnly: View {
         VStack {
             Spacer()
             ForEach(colorSchemeCases, id: \.title) { colorScheme in
-                TextOnlyItens(colorScheme: colorScheme)
+                AppearenceTextOptionView(colorScheme: colorScheme)
                     .frame(maxWidth: .infinity)
             }
             Spacer()

@@ -1,6 +1,6 @@
 //
-//  SwiftUIView.swift
-//  
+//  StyleSheetWithImagesView.swift
+//
 //
 //  Created by Marcelo Diefenbach on 28/12/23.
 //
@@ -20,7 +20,7 @@ struct StyleSheetWithImagesView: View {
         HStack {
             Spacer()
             ForEach(colorSchemeCases, id: \.title) { colorScheme in
-                WithImageItens(colorScheme: colorScheme)
+                AppearenceImageOptionView(colorScheme: colorScheme)
                     .frame(maxWidth: .infinity)
             }
             Spacer()
@@ -36,8 +36,4 @@ struct StyleSheetWithImagesView: View {
         .presentationDetents([.height(360)])
         .preferredColorScheme(appearanceProvider.colorScheme)
     }
-}
-
-#Preview {
-    StyleSheetWithImagesView()
 }

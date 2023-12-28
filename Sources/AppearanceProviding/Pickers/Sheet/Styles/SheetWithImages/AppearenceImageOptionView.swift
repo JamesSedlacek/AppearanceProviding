@@ -1,12 +1,12 @@
 //
-//  AppearanceOptionView.swift
+//  AppearenceImageOptionView.swift
 //
 //  Created by James Sedlacek on 12/26/23.
 //
 
 import SwiftUI
 
-struct WithImageItens: View {
+struct AppearenceImageOptionView: View {
     @Environment(AppearanceProvider.self)
     private var appearanceProvider
     private let colorScheme: ColorScheme?
@@ -43,9 +43,9 @@ struct WithImageItens: View {
 
 #Preview {
     HStack {
-        WithImageItens(colorScheme: .light)
-        WithImageItens(colorScheme: .dark)
-        WithImageItens(colorScheme: .none)
+        AppearenceImageOptionView(colorScheme: .light)
+        AppearenceImageOptionView(colorScheme: .dark)
+        AppearenceImageOptionView(colorScheme: .none)
     }
     .setAppearance()
 }
