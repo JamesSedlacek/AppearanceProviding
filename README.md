@@ -63,13 +63,13 @@ import SwiftUI
 struct SettingsView {
     var body: some View {
         VStack {
-            AppearanceSelector()
+            AppearancePicker()
                 .pickerStyle(.sheetWithImages)
-            AppearanceSelector()
+            AppearancePicker()
                 .pickerStyle(.sheetWithTextOnly)
-            AppearanceSelector()
+            AppearancePicker()
                 .pickerStyle(.segmentedControl)
-            AppearanceSelector()
+            AppearancePicker()
                 .pickerStyle(.menuPicker)
         }
     }
