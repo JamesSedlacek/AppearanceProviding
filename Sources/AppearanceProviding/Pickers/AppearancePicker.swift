@@ -24,9 +24,9 @@ public struct AppearancePicker: View {
     public var body: some View {
         switch style {
         case .sheetWithImages:
-            StyleSheetWithImagesView()
+            AppearanceSheetPicker(style: .sheetWithImages)
         case .sheetWithTextOnly:
-            StyleSheetWithTextOnly()
+            AppearanceSheetPicker(style: .sheetWithTextOnly)
         case .segmented:
             StyleSegmentedControl()
         case .menu:
