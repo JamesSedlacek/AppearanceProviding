@@ -1,17 +1,27 @@
 //
 //  AppearanceSheetPicker.swift
 //
-//  Created by James Sedlacek on 12/26/23.
+//  Created by Marcelo Diefenbach on 29/12/23.
 //
 
 import SwiftUI
 
 public struct AppearanceSheetPicker: View {
+    
+    public enum AppearanceSheetPickerStyle {
+        case sheetWithImages
+        case sheetWithTextOnly
+    }
+    
     @Environment(AppearanceProvider.self)
     private var appearanceProvider
     @State private var isSheetPresented = false
 
-    public init() { }
+    private let style: AppearanceSheetPickerStyle
+    
+    public init(style: AppearanceSheetPickerStyle = .sheetWithImages) {
+        self.style = style
+    }
 
     public var body: some View {
         HStack(spacing: 4) {
@@ -25,7 +35,12 @@ public struct AppearanceSheetPicker: View {
             isSheetPresented = true
         }
         .sheet(isPresented: $isSheetPresented) {
-            AppearanceSheet()
+            switch style {
+            case .sheetWithImages:
+                StyleSheetWithImagesView()
+            case .sheetWithTextOnly:
+                StyleSheetWithImagesView()
+            }
         }
     }
 }
@@ -37,3 +52,4 @@ public struct AppearanceSheetPicker: View {
     }
     .setAppearance()
 }
+
