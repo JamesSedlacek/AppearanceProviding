@@ -37,3 +37,10 @@ struct StyleSheetWithImagesView: View {
         .preferredColorScheme(appearanceProvider.colorScheme)
     }
 }
+
+
+#Preview {
+    StyleSheetWithImagesView()
+        .environment(AppearanceProvider())
+}
+

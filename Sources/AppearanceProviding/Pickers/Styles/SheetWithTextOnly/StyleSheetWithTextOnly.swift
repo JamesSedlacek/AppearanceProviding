@@ -38,7 +38,7 @@ struct StyleSheetWithTextOnly: View {
     }
 }
 
-
 #Preview {
     StyleSheetWithTextOnly()
+        .environment(AppearanceProvider())
 }
