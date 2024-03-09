@@ -1,12 +1,12 @@
 //
-//  AppearanceMenuPicker.swift
+//  AppearanceSegmentedControl.swift
 //
 //  Created by James Sedlacek on 12/26/23.
 //
 
 import SwiftUI
 
-public struct AppearanceMenuPicker: View {
+public struct StyleSegmentedControl: View {
     @Environment(AppearanceProvider.self)
     private var appearanceProvider
     private var colorSchemeCases: [ColorScheme?] {
@@ -22,13 +22,13 @@ public struct AppearanceMenuPicker: View {
                 Text(colorScheme.title)
             }
         }
-        .pickerStyle(.menu)
+        .pickerStyle(.segmented)
     }
 }
 
 #Preview {
     VStack {
-        AppearanceMenuPicker()
+        StyleSegmentedControl()
             .padding()
     }
     .setAppearance(default: .dark)
